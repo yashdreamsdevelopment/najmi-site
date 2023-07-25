@@ -592,9 +592,9 @@ section {
   color: #343a40;
   font-weight: 700;
 }
-.about-btn:hover{
+.about-btn:hover {
   background-color: #ffc451;
-  color:white
+  color: white;
 }
 .about .row {
   align-items: center;
@@ -699,12 +699,13 @@ section {
 # Industries
 --------------------------------------------------------------*/
 #industries {
-  background:linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.784),
-    hsla(325, 30%, 92%, 0.39)
-  ), url(../img/industries-bg.png);
-  background-repeat:no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.784),
+      hsla(325, 30%, 92%, 0.39)
+    ),
+    url(../img/industries-bg.png);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .industries .section-title h2 {
@@ -1116,7 +1117,7 @@ section {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
+  width: 150px;
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
@@ -1715,8 +1716,8 @@ section {
 
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/market.png);
   background-repeat: no-repeat;
@@ -1728,8 +1729,8 @@ section {
 #competitionBenchmarking {
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/competition.png);
   background-repeat: no-repeat;
@@ -1741,8 +1742,8 @@ section {
 #businessPlanning {
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/business.png);
   background-repeat: no-repeat;
@@ -1753,8 +1754,8 @@ section {
 #pricingAnalysis {
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/pricing.png);
   background-repeat: no-repeat;
@@ -1765,8 +1766,8 @@ section {
 #expansionStrategy {
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/expansion.png);
   background-repeat: no-repeat;
@@ -1777,8 +1778,8 @@ section {
 #gtm {
   background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.784),
-      hsl(324, 33%, 94%)
+      rgba(249, 232, 199, 0.525),
+      hsl(320, 18%, 97%)
     ),
     url(../img/consulting-logo/gtm.png);
   background-repeat: no-repeat;
