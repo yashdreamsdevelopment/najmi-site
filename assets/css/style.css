@@ -536,6 +536,7 @@ section {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
+  text-align: left;
 }
 .section-content {
   align-items: center;
