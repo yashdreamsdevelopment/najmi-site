@@ -1755,3 +1755,79 @@ section {
   margin-bottom: 15px;
   font-size: 24px;
 }
+/*--------------------------------------------------------------
+# analysis-hero
+--------------------------------------------------------------*/
+#analysis-hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/consulting-hero.png") top center;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+#analysis-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#analysis-hero .container {
+  position: relative;
+  text-align: center;
+}
+
+#analysis-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#analysis-hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+
+.analysis .section-title h2 {
+  color: #ddd;
+}
+.analysis .icon-box {
+  border: 1px solid #ebebeb;
+  padding: 20px 10px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.analysis .icon-box .icon {
+  margin: 0 auto;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.analysis .icon-box .icon img {
+  color: #151515;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.analysis .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
