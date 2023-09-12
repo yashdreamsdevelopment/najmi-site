@@ -1845,3 +1845,85 @@ section {
   left: -20px;
   transform: translateY(-50%) rotate(-45deg);
 }
+/*--------------------------------------------------------------
+# services-hero
+--------------------------------------------------------------*/
+#services-hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/services-bg.jpg") top center;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+#services-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#services-hero .container {
+  position: relative;
+  text-align: center;
+}
+
+#services-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#services-hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+/*--------------------------------------------------------------
+# services-hero
+--------------------------------------------------------------*/
+#marketAnalysis-hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/marketAnalysis-bg.jpg") top center;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+#marketAnalysis-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#marketAnalysis-hero .container {
+  position: relative;
+  text-align: center;
+}
+
+#marketAnalysis-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#marketAnalysis-hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
