@@ -1927,3 +1927,7 @@ section {
   margin: 10px 0 0 0;
   font-size: 22px;
 }
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
