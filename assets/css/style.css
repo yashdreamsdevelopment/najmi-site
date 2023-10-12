@@ -2001,7 +2001,7 @@ Market Entry Strategy
 #consulting-info {
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 255, 0),
+    rgba(0, 0, 255, 0.1),
     rgb(8, 133, 228)
   );
 }
@@ -2166,7 +2166,7 @@ body {
     calc(var(--not-p) * var(--pad) + var(--ini));
   color: #121212;
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .competitionBenchmarking {
@@ -2254,4 +2254,5 @@ article::after {
 }
 [data-icon="tracking"] {
   content: url("../img/consulting-logo/consulting-internal/trackingPerformance.png");
-} */
+}
+ */
