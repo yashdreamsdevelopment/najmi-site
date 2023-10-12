@@ -1887,7 +1887,7 @@ section {
   font-size: 22px;
 }
 /*--------------------------------------------------------------
-# services-hero
+# marketAnalysis-hero
 --------------------------------------------------------------*/
 #marketAnalysis-hero {
   width: 100%;
@@ -1998,32 +1998,33 @@ section {
 /*----------------------------------------------------------
 Market Entry Strategy
 ------------------------------------------------------------*/
-#marketStrategy {
+#consulting-info {
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 255, 0),
     rgb(8, 133, 228)
   );
-  /*   background-color: #2837dd; */
 }
-.marketStrategy .section-title {
+.consulting-info .section-title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.marketStrategy .section-title p {
+.consulting-info .section-title p {
   color: white;
 }
-.marketStrategy .section-content p {
+.consulting-info .section-content p {
   color: white;
 }
-.marketStrategy .section-content p:first-child {
+.consulting-info .section-content p:first-child {
   font-size: 18px;
   font-weight: 400;
   text-transform: none;
   font-family: "Poppins", sans-serif;
 }
-
+/*----------------------------------------------------------
+Market Entry Strategy Infographic
+------------------------------------------------------------*/
 /* grid layout */
 .marketStrategy ul,
 ul::before,
@@ -2134,3 +2135,123 @@ ul *::after {
   text-align: center;
   color: var(--accent-color);
 }
+
+/*----------------------------------------------------------
+Competition Benchmarking Infographic
+------------------------------------------------------------*/
+
+body {
+  --_mini: var(--mini, 0);
+  --not-mini: calc(1 - var(--_mini));
+  --_narr: var(--narr, 0);
+  --not-narr: calc(1 - var(--_narr));
+  --_wide: var(--wide, 1);
+  --not-wide: calc(1 - var(--_wide));
+  grid-gap: 1em;
+  align-content: center;
+  justify-content: var(--mini, center);
+  margin: 0;
+  padding: calc(var(--_wide) * 0.5em);
+}
+
+.competitionBenchmarking h2 {
+  grid-row: 1;
+  margin: 0;
+  --pad: calc(
+    var(--not-mini) * (var(--_wide) * 6.25rem + var(--not-wide) * 0.75rem)
+  );
+  --ini: calc(var(--_mini) * 0.25rem);
+  grid-column-end: span calc(1 + var(--_mini));
+  padding: var(--ini) calc(var(--_p) * var(--pad) + var(--ini)) var(--ini)
+    calc(var(--not-p) * var(--pad) + var(--ini));
+  color: #121212;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.competitionBenchmarking {
+  padding-bottom: 1.5rem;
+  width: min(43.75em, 100%);
+  color: #121212;
+  filter: drop-shadow(2px 2px 2.5px #000);
+  display: grid;
+  justify-self: center;
+}
+
+.competitionBenchmarking article {
+  display: grid;
+  --_p: var(--p, 0);
+  --not-p: calc(1 - var(--_p));
+  --sgn-p: calc(2 * var(--_p) - 1);
+  box-sizing: border-box;
+  grid-gap: 0.5em;
+  grid-template-columns: var(--narr, 1fr -webkit-max-content 1fr);
+  grid-template-columns: var(--narr, 1fr max-content 1fr);
+  margin: 0 0 -0.75rem;
+  padding: calc(0.5em + 0.75em) 0 calc(0.5em + 0.75em);
+  --shadow: conic-gradient(
+    from calc(var(--_p) * -5deg + var(--sgn-p) * -90deg) at
+      calc(var(--_p) * 100% - var(--sgn-p) * var(--_wide) * 6.25rem) -3px,
+    hsla(0, 0%, 0%, calc(var(--not-p) * 0.5)),
+    hsla(0, 0%, 0%, calc(var(--_p) * 0.5)) 5deg,
+    transparent 0%
+  );
+  background: var(--shadow)
+    linear-gradient(calc(var(--sgn-p) * 90deg), var(--c0) 6.25rem, var(--c1));
+  -webkit-clip-path: polygon(
+    calc(var(--_p) * 100%) 50%,
+    calc(var(--_p) * 100% - var(--sgn-p) * var(--_wide) * 3.125rem) 0,
+    calc(var(--not-p) * 100% + var(--sgn-p) * var(--_wide) * 6.25rem) 0.75rem,
+    calc(var(--not-p) * 100% + var(--sgn-p) * var(--_wide) * 6.25rem)
+      calc(100% - 0.75rem),
+    calc(var(--_p) * 100% - var(--sgn-p) * var(--_wide) * 3.125rem) 100%
+  );
+  clip-path: polygon(
+    calc(var(--_p) * 100%) 50%,
+    calc(var(--_p) * 100% - var(--sgn-p) * var(--_wide) * 3.125rem) 0,
+    calc(var(--not-p) * 100% + var(--sgn-p) * var(--_wide) * 6.25rem) 0.75rem,
+    calc(var(--not-p) * 100% + var(--sgn-p) * var(--_wide) * 6.25rem)
+      calc(100% - 0.75rem),
+    calc(var(--_p) * 100% - var(--sgn-p) * var(--_wide) * 3.125rem) 100%
+  );
+  counter-increment: c;
+  --shadow: ;
+}
+article:nth-child(2n) {
+  --p: 1;
+}
+.competitionBenchmarking article::before,
+article::after {
+  align-self: center;
+}
+.competitionBenchmarking article:before {
+  grid-column: calc(var(--not-mini) * 2 + var(--_mini) * (var(--_p) + 1));
+  grid-row: calc(1 + var(--_mini)) / span calc(2 - var(--_mini));
+  padding: 0 0.75rem;
+  font-size: calc((1.5 * var(--not-mini) + 2.5) * 1em);
+  text-align: center;
+  content: counter(c, decimal-leading-zero);
+}
+
+.competitionBenchmarking article::after {
+  grid-row: calc(1 + var(--_mini)) / span calc(2 - var(--_mini));
+  grid-column: calc((1 + var(--not-mini)) * var(--not-p) + 1);
+  padding: 0 calc(var(--not-p) * var(--_wide) * 6.25rem + 0.75rem) 0
+    calc(var(--_p) * var(--_wide) * 6.25rem + 0.75rem);
+  font-size: calc((var(--not-mini) * 0.75 + 1.75) * 1em);
+  text-align: var(--p, right);
+  filter: brightness(0) invert(0.0625);
+  content: attr(data-icon);
+}
+/* [data-icon="research"] {
+  content: url("../img/consulting-logo/consulting-internal/conduct\ research.png");
+}
+[data-icon="competitors"] {
+  content: url("../img/consulting-logo/consulting-internal/indentifyCompetitors.png");
+}
+[data-icon="marketGap"] {
+  content: url("../img/consulting-logo/consulting-internal/measuringmarketgap.png");
+}
+[data-icon="tracking"] {
+  content: url("../img/consulting-logo/consulting-internal/trackingPerformance.png");
+} */
