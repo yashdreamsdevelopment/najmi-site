@@ -1707,7 +1707,7 @@ section {
   margin: 10px 0 0 0;
   font-size: 22px;
 }
-
+/* 
 .analysis .section-title h2 {
   color: #ddd;
 }
@@ -1755,7 +1755,7 @@ section {
   top: calc(50% - 4px);
   left: -20px;
   transform: translateY(-50%) rotate(-45deg);
-}
+} */
 /*--------------------------------------------------------------
 # services-hero
 --------------------------------------------------------------*/
@@ -1842,15 +1842,68 @@ section {
 [aria-expanded="true"] > .collapsed {
   display: none;
 }
+#analysis {
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #ecddc0);
+}
+.analysis .section-title h2 {
+  color: #ddd;
+}
+.analysis .icon-box {
+  width: 100%;
+}
+
+.analysis .icon-box .icon {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  text-align: center;
+  border: 10px solid #ebebeb;
+  padding: 40px 30px;
+  border-left: 10px solid #ffc451;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.analysis .icon-box .icon img {
+  color: #151515;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+  max-width: 150px;
+}
+
+.analysis .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.analysis .icon-box p {
+  font-size: 14px;
+}
+.analysis .icon-box a {
+  font-weight: 700;
+  color: #444444;
+  transition: ease-in-out 0.3s;
+}
+
+.analysis .icon-box a:hover {
+  color: #3290d3;
+}
+
+.analysis .icon:hover {
+  border-color: 1px solid #ffbb38;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
 /*--------------------------------------------------------------
 # Consulting
 --------------------------------------------------------------*/
 #consulting {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgb(183, 215, 239)
-  );
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #ecddc0);
 }
 .consulting .section-title h2 {
   color: #ddd;
@@ -1870,7 +1923,7 @@ section {
   text-align: center;
   border: 10px solid #ebebeb;
   padding: 40px 30px;
-  border-left: 10px solid #3290d3;
+  border-left: 10px solid #ffc451;
   border-radius: 50%;
   height: 100%;
 }
@@ -1901,7 +1954,7 @@ section {
 }
 
 .consulting .icon:hover {
-  border-color: 1px solid #ffbb38;
+  border-color: 1px solid #ffc451;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
