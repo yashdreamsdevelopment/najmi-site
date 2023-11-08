@@ -2201,18 +2201,11 @@ Competition Benchmarking Infographic
 /*----------------------------------------------------------
 Business Planning Infographic
 ------------------------------------------------------------*/
-.imgbox img {
+.businessPlanning .imgbox img {
   width: 100%;
 }
 
-/* .flexbox {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: nowrap;
-} */
-
-.flex {
+.businessPlanning .flex {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -2220,29 +2213,29 @@ Business Planning Infographic
   justify-content: center;
 }
 
-.flexbottom {
+.businessPlanning .flexbottom {
   border-bottom: 6px solid #009688;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
 }
 
-.flextop {
+.businessPlanning .flextop {
   border-top: 5px solid #009688;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   position: relative;
 }
 
-.flextop:before {
+.businessPlanning .flextop:before {
   content: "";
   width: 1px;
   height: 250px;
   background: #009688;
   position: absolute;
-  left: 0; /* border-radius: 64px; */
+  left: 0;
 }
 
-.flextop:after {
+.businessPlanning .flextop:after {
   content: "";
   width: 1px;
   height: 250px;
@@ -2251,15 +2244,15 @@ Business Planning Infographic
   right: 0;
 }
 
-.flexbottom {
+.businessPlanning .flexbottom {
   box-shadow: inset 0px -20px 0px #03a999;
 }
 
-.flex.flextop {
+.businessPlanning .flex.flextop {
   box-shadow: inset 0px 20px 0px #03a999;
 }
 
-.stepNumber {
+.businessPlanning .stepNumber {
   width: 100%;
   text-align: center;
   border: 1px solid orange;
@@ -2268,16 +2261,16 @@ Business Planning Infographic
   color: white;
 }
 /*---------------------------------------------------------
-Expansion Strategy
+pricingAnalysis
 -----------------------------------------------------------*/
 
-.expansionStrategy ol,
+.pricingAnalysis ol,
 ol > li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.expansionStrategy ol {
+.pricingAnalysis ol {
   width: min(400px, 100% - 2rem);
   margin-inline: auto;
   list-style: none;
@@ -2286,10 +2279,10 @@ ol > li {
   color: white;
   counter-reset: liCount;
 }
-.expansionStrategy ol:not(.alternate) {
+.pricingAnalysis ol:not(.alternate) {
   gap: 0.5rem;
 }
-.expansionStrategy ol > li {
+.pricingAnalysis ol > li {
   --number-size: 3rem;
   --padding-inline: 2.5rem;
   --padding-block: 0.5rem;
@@ -2309,7 +2302,7 @@ ol > li {
   isolation: isolate;
   counter-increment: liCount;
 }
-.expansionStrategy ol > li::before {
+.pricingAnalysis ol > li::before {
   content: counter(liCount);
   font-size: calc(var(--number-size) / 2);
   color: var(--accent-color);
@@ -2323,7 +2316,7 @@ ol > li {
     0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.5),
     inset -0.05rem -0.05rem hsl(0 0% 0% / 0.125);
 }
-.expansionStrategy ol > li::after {
+.pricingAnalysis ol > li::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -2351,21 +2344,263 @@ ol > li {
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.125);
 }
 
-.expansionStrategy ol.alternate > li:nth-child(even),
+.pricingAnalysis ol.alternate > li:nth-child(even),
 ol.right > li {
   grid-template-columns: 1fr auto;
 }
-.expansionStrategy ol.alternate > li:nth-child(even)::before,
+.pricingAnalysis ol.alternate > li:nth-child(even)::before,
 ol.right > li::before {
   grid-column: 2;
 }
-.expansionStrategy ol.alternate > li:nth-child(even)::after,
+.pricingAnalysis ol.alternate > li:nth-child(even)::after,
 ol.right > li::after {
   inset-inline: auto var(--inset-inline);
 }
-.expansionStrategy .alternate img {
+.pricingAnalysis .alternate img {
   width: 100px;
 }
+/*--------------------------------------------------------------
+Expansion Strategy
+--------------------------------------------------------------*/
+
+.step-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.step-list__item {
+  counter-increment: step-list-count;
+  position: relative;
+}
+.step-list__item :before {
+  content: counter(step-list-count);
+  font-weight: 300;
+  color: #d8d8d8;
+}
+
+.step-list__item h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.step-list__item .icon {
+  border-radius: 50%;
+  display: block;
+  flex: 0 0 auto;
+}
+.step-list__item .icon img {
+  width: 200px;
+  height: 200px;
+}
+.step-list .body {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.step-list__item .content {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 18px;
+}
+.step-list__item:first-child .icon {
+  background: #f4f6d5;
+}
+.step-list__item:nth-child(2) .icon {
+  background: #e8f4f3;
+}
+.step-list__item:nth-child(3) .icon {
+  background: #ededed;
+}
+.step-list__item:nth-child(4) .icon {
+  background: #edf6ef;
+}
+.step-list__item:nth-child(odd) .content {
+  justify-content: flex-start;
+}
+.step-list__item:nth-child(even) .content {
+  justify-content: flex-end;
+}
+.step-list__item:first-child > .step-list__item__inner::before {
+  content: none;
+}
+.step-list__item:last-child > .step-list__item__inner::after {
+  content: none;
+}
+.step-list__item + li {
+  margin-top: 42px * 2;
+}
+.step-list__item + li > div {
+  margin-top: -1px;
+}
+
+@include breakpoint(small) {
+  &:before {
+    content: counter(step-list-count);
+    position: relative;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 300;
+    color: #000000;
+    margin-right: 12px;
+  }
+
+  .icon {
+    order: 0;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    position: absolute;
+    left: -9px;
+    top: 42px;
+  }
+
+  .body {
+    order: 1;
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+
+  .content {
+    align-items: flex-start;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-left: #d8d8d8;
+      height: 100%;
+      left: 9px;
+      bottom: 0;
+      display: block;
+      width: 1px;
+      background: #d8d8d8;
+      top: 84px;
+    }
+  }
+
+  &:last-child {
+    .content {
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+@include breakpoint(big) {
+  &:before {
+    content: counter(step-counter);
+    position: absolute;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 300;
+    color: #d8d8d8;
+  }
+
+  .icon {
+    width: 174px;
+    height: 174px;
+    padding: 48px;
+  }
+
+  .body {
+    flex: 0 1 33.3333%;
+    margin-top: 42px * 2;
+  }
+
+  .content {
+    align-items: flex-end;
+  }
+
+  > .step-list__item__inner {
+    position: relative;
+
+    &:before,
+    &:after {
+      border-width: 0px;
+      border-style: solid;
+      border-color: #d8d8d8;
+      display: block;
+      content: "";
+      position: absolute;
+      height: 42px;
+      width: calc(33.3333% - #{42px});
+    }
+  }
+
+  &:nth-child(odd) {
+    > .step-list__item__inner {
+      text-align: right;
+
+      &:before,
+      &:after {
+        border-left-width: 1px;
+        left: calc(33.3333% - #{42px / 2});
+      }
+
+      &:before {
+        border-top-width: 1px;
+        border-top-left-radius: 42px;
+        margin-top: -42px;
+      }
+
+      &:after {
+        border-bottom-width: 1px;
+        border-bottom-left-radius: 42px;
+        margin-bottom: -42px;
+      }
+    }
+
+    &:before {
+      left: 0;
+      margin-left: 33.3333%;
+      transform: translateX(-100%);
+    }
+
+    .icon {
+      margin-left: 72px;
+    }
+  }
+
+  &:nth-child(even) {
+    > .step-list__item__inner {
+      &:before,
+      &:after {
+        border-right-width: 1px;
+        right: calc(33.3333% - #{42px / 2});
+      }
+
+      &:before {
+        border-top-width: 1px;
+        border-top-right-radius: 42px;
+        margin-top: -42px;
+      }
+
+      &:after {
+        border-bottom-width: 1px;
+        border-bottom-right-radius: 42px;
+        margin-bottom: -42px;
+      }
+    }
+
+    &:before {
+      right: 0;
+      margin-right: 33.3333%;
+      transform: translateX(100%);
+    }
+
+    .icon {
+      margin-right: 72px;
+    }
+
+    .body {
+      order: 1;
+    }
+  }
+}
+
 /*----------------------------------------------------------
 Customer Satisfaction
 ------------------------------------------------------------*/
