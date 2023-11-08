@@ -1963,11 +1963,7 @@ section {
 Market Entry Strategy
 ------------------------------------------------------------*/
 #consulting-info {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 255, 0.1),
-    rgb(8, 133, 228)
-  );
+  background-image: linear-gradient(to right, rgba(0, 0, 255, 0.112), #ffc451);
 }
 .consulting-info .section-title {
   display: flex;
@@ -2369,4 +2365,167 @@ ol.right > li::after {
 }
 .expansionStrategy .alternate img {
   width: 100px;
+}
+/*----------------------------------------------------------
+Customer Satisfaction
+------------------------------------------------------------*/
+
+.flexcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%;
+  align-items: baseline;
+  border-radius: 20px;
+}
+
+.flexcardNumber {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0px;
+  border-radius: 0px 50px 50px 0px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  text-shadow: 0px 3px 5px black;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+}
+
+.flexcardTitle {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.flexcardText {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+.flexcardNumber:before {
+  content: "";
+  width: 34px;
+  height: 90px;
+  position: absolute;
+  left: -33px;
+  top: 0px;
+  border-radius: 50px 0px 0px 50px;
+  z-index: -1;
+  /* background: #95B7A2; */ /* background: -webkit-linear-gradient(bottom, #95B7A2, #AED2BC); */
+  background: -moz-linear-gradient(bottom, #95b7a2, #aed2bc);
+  /* background: linear-gradient(to top, #95B7A2, #AED2BC); */
+}
+
+.flexcardNumber:after {
+  content: "";
+  width: 25px;
+  height: 40px;
+  position: absolute;
+  left: -25px;
+  bottom: -40px;
+  border-radius: 50px 0px 0px 50px;
+  z-index: -1;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+/* GREEN CARD */
+
+.flexcardGreen {
+  background: #f9fbfa;
+  box-shadow: 4px 4px 4px #aed2bc;
+}
+
+.flexcardNumberGreen {
+  background: #fcfcfc;
+  background: -webkit-linear-gradient(right, #fcfcfc, #aed2bc);
+  background: -moz-linear-gradient(right, #fcfcfc, #aed2bc);
+  background: linear-gradient(to left, #fcfcfc, #aed2bc);
+  box-shadow: 0px 2px 2px #aed2bc;
+}
+
+.flexcardNumberGreen:before {
+  background: #aed2bc;
+}
+
+.flexcardNumberGreen:after {
+  background: #95b7a2;
+}
+
+/* BLUE CARD */
+
+.flexcardBlue {
+  background: #f7ffff;
+  box-shadow: 4px 8px 1px #92e8eb;
+}
+
+.flexcardNumberBlue {
+  background: #fdfffe;
+  background: -webkit-linear-gradient(right, #fdfffe, #92e8eb);
+  background: -moz-linear-gradient(right, #fdfffe, #92e8eb);
+  background: linear-gradient(to left, #fdfffe, #92e8eb);
+  box-shadow: 0px 2px 2px #92e8eb;
+}
+
+.flexcardNumberBlue:before {
+  background: #92e8eb;
+}
+
+.flexcardNumberBlue:after {
+  background: #71bdbf;
+}
+
+/* PİNK CARD */
+
+.flexcardPink {
+  background: #fffafd;
+  box-shadow: 4px 8px 1px #f34eae;
+}
+.flexcardPink:before {
+  content: "";
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-left: 100px solid transparent;
+}
+.flexcardNumberPink {
+  background: #fdfffe;
+  background: -webkit-linear-gradient(right, #fdfffe, #f34eae);
+  background: -moz-linear-gradient(right, #fdfffe, #f34eae);
+  background: linear-gradient(to left, #fdfffe, #f34eae);
+  box-shadow: 0px 2px 2px #f34eae;
+}
+
+.flexcardNumberPink:before {
+  background: #f34eae;
+}
+
+.flexcardNumberPink:after {
+  background: #d24095;
+}
+
+/* RESPONSİVE */
+
+@media (max-width: 800px) {
+  .flexcard {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .flexcard {
+    width: 70%;
+  }
 }
