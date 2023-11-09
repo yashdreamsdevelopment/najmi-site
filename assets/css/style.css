@@ -2436,7 +2436,7 @@ Expansion Strategy
   margin-top: -1px;
 }
 
-@include breakpoint(small) {
+@media (sm) {
   &:before {
     content: counter(step-list-count);
     position: relative;
@@ -2635,12 +2635,14 @@ Customer Satisfaction
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 400;
+  padding: 0px 20px;
 }
 
 .flexcardText {
   font-family: "Poppins", sans-serif;
-  text-align: center;
+  text-align: justify;
   font-weight: 300;
+  padding: 0px 20px;
 }
 
 .flexcardNumber:before {
