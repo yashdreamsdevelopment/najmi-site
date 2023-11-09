@@ -1963,7 +1963,11 @@ section {
 Market Entry Strategy
 ------------------------------------------------------------*/
 #consulting-info {
-  background-image: linear-gradient(to right, rgba(0, 0, 255, 0.112), #ffc451);
+  background-image: linear-gradient(
+    to right,
+    rgba(192, 201, 128, 0.2),
+    #ffc451
+  );
 }
 .consulting-info .section-title {
   display: flex;
@@ -2765,4 +2769,200 @@ Customer Satisfaction
   .flexcard {
     width: 70%;
   }
+}
+
+/*---------------------------------------------------------
+Instore Survey
+----------------------------------------------------------*/
+.olcards,
+.olcards * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.olcards {
+  list-style: none;
+  counter-reset: cardCount;
+  display: flex;
+  flex-direction: column;
+  --cardsGap: 1rem;
+  gap: var(--cardsGap);
+  padding-bottom: var(--cardsGap);
+}
+.olcards li {
+  counter-increment: cardCount;
+  display: flex;
+  color: white;
+  --labelOffset: 1rem;
+  --arrowClipSize: 1.5rem;
+  margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+  content: counter(cardCount, decimal-leading-zero);
+  background: white;
+  color: var(--cardColor);
+  font-size: 2em;
+  font-weight: 700;
+  transform: translateY(calc(-1 * var(--labelOffset)));
+  margin-right: calc(-1 * var(--labelOffset));
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 0.5em;
+}
+
+.olcards li .content {
+  background-color: var(--cardColor);
+  --inlinePadding: 1em;
+  --boxPadding: 0.5em;
+  display: grid;
+  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+    var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  gap: 0.25em 1em;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--arrowClipSize)) 0,
+    100% 50%,
+    calc(100% - var(--arrowClipSize)) 100%,
+    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+    0 calc(100% + var(--cardsGap))
+  );
+  position: relative;
+}
+.olcards li .content::before {
+  content: "";
+  position: absolute;
+  width: var(--labelOffset);
+  height: var(--labelOffset);
+  background: var(--cardColor);
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  filter: brightness(0.75);
+}
+.olcards li .content::after {
+  content: "";
+  position: absolute;
+  height: var(--cardsGap);
+  width: var(--cardsGap);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+  left: 0;
+  top: 100%;
+}
+.olcards li .icon {
+  grid-area: icon;
+  align-self: center;
+  font-size: 2em;
+}
+.olcards li .content .title {
+  grid-area: title;
+  font-size: 1.25em;
+  /* font-weight: 700; */
+}
+.olcards li .content .text {
+  grid-area: text;
+}
+/*---------------------------------------------------------
+Social Research
+----------------------------------------------------------*/
+
+.infographic-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 5px;
+}
+
+.infographic-items {
+  --color-main: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.infographic-items h2 {
+  text-transform: uppercase;
+}
+
+.infographic-items h2 {
+  background: var(--color-accent);
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 30px;
+  margin: 0;
+}
+.infographic-items p {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-accent);
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.clip-wrapper {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    var(--color-main) 0%,
+    var(--color-main) 50%,
+    var(--color-accent) 50%,
+    var(--color-accent) 100%
+  );
+}
+.clip-1,
+.clip-2,
+.content {
+  position: absolute;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clip-1 {
+  height: 100%;
+  aspect-ratio: 1;
+  background: var(--color-main);
+  z-index: 1;
+}
+.clip-2 {
+  --border: 30px;
+  aspect-ratio: 1;
+  height: calc(100% - var(--border));
+  background: var(--color-accent);
+  z-index: 2;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content i {
+  font-size: 26px;
+}
+
+.infographic-items:nth-child(1) {
+  --color-accent: #ff3d00;
+}
+.infographic-items:nth-child(2) {
+  --color-accent: #ff9100;
 }
