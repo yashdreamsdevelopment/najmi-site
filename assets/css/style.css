@@ -1631,7 +1631,7 @@ section {
   margin: 10px 0 0 0;
   font-size: 22px;
 }
-
+/* 
 .otherConsulting .section-title h2 {
   color: #ddd;
 }
@@ -1666,7 +1666,7 @@ section {
   margin-bottom: 15px;
   font-size: 24px;
 }
-/*--------------------------------------------------------------
+ */ /*--------------------------------------------------------------
 # analysis-hero
 --------------------------------------------------------------*/
 #analysis-hero {
@@ -1707,55 +1707,7 @@ section {
   margin: 10px 0 0 0;
   font-size: 22px;
 }
-/* 
-.analysis .section-title h2 {
-  color: #ddd;
-}
-.analysis .icon-box {
-  border: 1px solid #ebebeb;
-  padding: 20px 10px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
 
-.analysis .icon-box .icon {
-  margin: 0 auto;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.analysis .icon-box .icon img {
-  color: #151515;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.analysis .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.logistics ul {
-  list-style: none;
-}
-.logistics .head li:before {
-  content: "";
-  position: absolute;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  width: 10px;
-  height: 10px;
-  top: calc(50% - 4px);
-  left: -20px;
-  transform: translateY(-50%) rotate(-45deg);
-} */
 /*--------------------------------------------------------------
 # services-hero
 --------------------------------------------------------------*/
@@ -1950,7 +1902,7 @@ section {
 }
 
 .consulting .icon-box a:hover {
-  color: #3290d3;
+  color: #ffc451;
 }
 
 .consulting .icon:hover {
@@ -1975,10 +1927,10 @@ Market Entry Strategy
   align-items: center;
 }
 .consulting-info .section-title p {
-  color: white;
+  color: rgb(42, 39, 39);
 }
 .consulting-info .section-content p {
-  color: white;
+  color: rgb(42, 39, 39);
 }
 .consulting-info .section-content p:first-child {
   font-size: 18px;
@@ -2872,14 +2824,14 @@ Instore Survey
 Social Research
 ----------------------------------------------------------*/
 
-.infographic-wrapper {
+.socialResearch {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   gap: 5px;
 }
 
-.infographic-items {
+.socialResearch .infographic-items {
   --color-main: #ffffff;
   display: flex;
   flex-direction: column;
@@ -2887,11 +2839,11 @@ Social Research
   color: #fff;
 }
 
-.infographic-items h2 {
+.socialResearch .infographic-items h2 {
   text-transform: uppercase;
 }
 
-.infographic-items h2 {
+.socialResearch .infographic-items h2 {
   background: var(--color-accent);
   display: block;
   width: 100%;
@@ -2900,7 +2852,7 @@ Social Research
   padding-top: 30px;
   margin: 0;
 }
-.infographic-items p {
+.socialResearch .infographic-items p {
   padding-left: 20px;
   padding-right: 20px;
   background: var(--color-accent);
@@ -2912,7 +2864,7 @@ Social Research
   font-weight: 300;
 }
 
-.clip-wrapper {
+.socialResearch .clip-wrapper {
   width: 100%;
   height: 100px;
   position: relative;
@@ -2925,9 +2877,9 @@ Social Research
     var(--color-accent) 100%
   );
 }
-.clip-1,
-.clip-2,
-.content {
+.socialResearch .clip-1,
+.socialResearch .clip-2,
+.socialResearch .content {
   position: absolute;
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   top: 50%;
@@ -2935,20 +2887,20 @@ Social Research
   transform: translate(-50%, -50%);
 }
 
-.clip-1 {
+.socialResearch .clip-1 {
   height: 100%;
   aspect-ratio: 1;
   background: var(--color-main);
   z-index: 1;
 }
-.clip-2 {
+.socialResearch .clip-2 {
   --border: 30px;
   aspect-ratio: 1;
   height: calc(100% - var(--border));
   background: var(--color-accent);
   z-index: 2;
 }
-.content {
+.socialResearch .content {
   width: 100%;
   height: 100%;
   z-index: 3;
@@ -2956,13 +2908,183 @@ Social Research
   justify-content: center;
   align-items: center;
 }
-.content i {
+.socialResearch .content i {
   font-size: 26px;
 }
 
-.infographic-items:nth-child(1) {
+.socialResearch .infographic-items:nth-child(1) {
   --color-accent: #ff3d00;
 }
-.infographic-items:nth-child(2) {
+.socialResearch .infographic-items:nth-child(2) {
   --color-accent: #ff9100;
+}
+/*--------------------------------------------------------
+Our Services
+---------------------------------------------------------*/
+#ourServices {
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #ecddc0);
+}
+/* Global Variables */
+:root {
+  --color1: #ededed;
+  --color2: #64c1cf;
+  --color3: #b1c3c1;
+  --color4: #bd9ac8;
+  --color5: #6d87b5;
+  --color6: #00acb5;
+  --color7: #dbd3b1;
+  --color8: #ffffff;
+  --color9: #edf2f2;
+  --color10: #4d5972;
+}
+
+/* Figure */
+.figure:nth-of-type(2) {
+  margin-left: 35px;
+  margin-top: 70px;
+}
+
+/* Path */
+.figure__path {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figure__pathStart {
+  width: 22px;
+  height: 22px;
+  border: solid 4px var(--color1);
+  outline: solid 3.5px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.figure__pathPoint {
+  background-color: var(--color10);
+  width: 9px;
+  height: 9px;
+  margin-top: 16px;
+  border-radius: 50%;
+}
+
+.figure__pathPoint:last-of-type {
+  margin-bottom: 16px;
+}
+
+.figure__path:last-of-type .figure__pathPoint {
+  display: none;
+}
+
+/* Product */
+.figure__product {
+  width: 350px;
+  height: 150px;
+  padding: 0 20px;
+  border-radius: 1000px;
+
+  /* Position */
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* Flex */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.figure__product::before {
+  width: 0;
+  height: 0;
+  border: solid 15px;
+  border-color: transparent transparent transparent var(--color2);
+
+  content: "";
+  position: absolute;
+  right: calc(-2 * 15px + 2px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.figure__path:nth-of-type(2) .figure__product::before {
+  border-color: transparent transparent transparent var(--color3);
+}
+
+.figure__path:nth-of-type(3) .figure__product::before {
+  border-color: transparent transparent transparent var(--color4);
+}
+
+/* Product - Right */
+.figure__product--right {
+  left: 50px;
+  flex-direction: row-reverse;
+}
+
+.figure__product--right::before {
+  border-color: transparent var(--color5) transparent transparent;
+  left: calc(-2 * 15px + 2px);
+}
+
+.figure__path:nth-of-type(2) .figure__product--right::before {
+  border-color: transparent var(--color6) transparent transparent;
+}
+
+.figure__path:nth-of-type(3) .figure__product--right::before {
+  border-color: transparent var(--color7) transparent transparent;
+}
+
+.figure__productContent {
+  padding: 10px 0;
+
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.figure__productContent a {
+  color: #000;
+}
+.figure__productContent span {
+  padding: 5px 0;
+}
+.figure__productName {
+  color: var(--color8);
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.figure__productDesc {
+  color: var(--color8);
+  max-width: 140px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.figure__productIconBox {
+  background-color: var(--color9);
+  width: 95px;
+  height: 95px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 10px 8px 16px -8px;
+
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.figure__product--right .figure__productIconBox {
+  box-shadow: rgba(50, 50, 93, 0.25) -10px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) -10px 8px 16px -8px;
+}
+
+.figure__productIcon img {
+  width: 250px;
+  height: 250px;
 }
