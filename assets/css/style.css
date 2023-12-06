@@ -3208,14 +3208,14 @@ ol.knowledge {
 ol.knowledge li {
   counter-increment: myCounter;
   margin: 0 0 45px 0;
-  padding: 13px 0 0 85px;
+  padding: 10px 0 0 55px;
   position: relative;
 }
 ol.knowledge li::before {
   content: counter(myCounter, decimal-leading-zero);
   display: inline-block;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1.3em;
   background-color: #f5b432;
   font-family: "Roboto", sans-serif;
@@ -3389,4 +3389,25 @@ ol.leadGeneration > li::before {
   background-color: currentcolor;
   right: calc(100% + var(--column-gap) / 2);
   top: calc(50% - var(--number-line-height) / 2);
+}
+/*---------------------------------------------------------------
+Licensing Section
+----------------------------------------------------------------*/
+ul.licensing {
+  list-style: none;
+  padding: 0;
+}
+
+ul.licensing li {
+  background-color: var(--accent-color);
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+/*---------------------------------------------------------------
+Logistics Section
+----------------------------------------------------------------*/
+ul.logistics img {
+  height: 300px;
+  width: 100%;
 }
