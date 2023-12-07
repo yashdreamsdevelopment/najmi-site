@@ -2322,242 +2322,69 @@ ol.right > li::after {
 Expansion Strategy
 --------------------------------------------------------------*/
 
-.step-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+.standing-icon {
+  width: 8rem;
+  aspect-ratio: 1;
+  --back-size: 1.5rem;
+  --touch-shadow-height: 1rem;
+  --front-shadow-offset: 0.25rem;
+  margin-inline: var(--back-size);
+  margin-bottom: calc(var(--back-size) + var(--touch-shadow-height));
 
-.step-list__item {
-  counter-increment: step-list-count;
-  position: relative;
-}
-.step-list__item :before {
-  content: counter(step-list-count);
-  font-weight: 300;
-  color: #d8d8d8;
-}
-
-.step-list__item h2 {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 300;
-}
-
-.step-list__item .icon {
+  background-color: #f9faf9;
+  background-image: linear-gradient(
+    to top right,
+    transparent,
+    rgb(0 0 0 / 0.125)
+  );
   border-radius: 50%;
-  display: block;
-  flex: 0 0 auto;
-}
-.step-list__item .icon img {
-  width: 200px;
-  height: 200px;
-}
-.step-list .body {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 300;
-}
 
-.step-list__item .content {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 18px;
-}
-.step-list__item:first-child .icon {
-  background: #f4f6d5;
-}
-.step-list__item:nth-child(2) .icon {
-  background: #e8f4f3;
-}
-.step-list__item:nth-child(3) .icon {
-  background: #ededed;
-}
-.step-list__item:nth-child(4) .icon {
-  background: #edf6ef;
-}
-.step-list__item:nth-child(odd) .content {
-  justify-content: flex-start;
-}
-.step-list__item:nth-child(even) .content {
-  justify-content: flex-end;
-}
-.step-list__item:first-child > .step-list__item__inner::before {
-  content: none;
-}
-.step-list__item:last-child > .step-list__item__inner::after {
-  content: none;
-}
-.step-list__item + li {
-  margin-top: 42px * 2;
-}
-.step-list__item + li > div {
-  margin-top: -1px;
+  box-shadow: inset 0.125rem -0.125rem 0.25rem rgb(0 0 0 / 0.125),
+    inset -0.25rem 0.25rem 0.25rem rgb(255 255 255 / 0.25);
+  /*     -0.25rem 0.25rem 0.25rem rgb(0 0 0 / .25); */
+  position: relative;
+
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  font-size: 4rem;
+  color: var(--accent-color);
 }
 
-@media (sm) {
-  &:before {
-    content: counter(step-list-count);
-    position: relative;
-    font-size: 36px;
-    line-height: 42px;
-    font-weight: 300;
-    color: #000000;
-    margin-right: 12px;
-  }
-
-  .icon {
-    order: 0;
-    width: 36px;
-    height: 36px;
-    padding: 9px;
-    position: absolute;
-    left: -9px;
-    top: 42px;
-  }
-
-  .body {
-    order: 1;
-    margin-top: 8px;
-    margin-left: 12px;
-  }
-
-  .content {
-    align-items: flex-start;
-
-    &:before {
-      content: "";
-      position: absolute;
-      border-left: #d8d8d8;
-      height: 100%;
-      left: 9px;
-      bottom: 0;
-      display: block;
-      width: 1px;
-      background: #d8d8d8;
-      top: 84px;
-    }
-  }
-
-  &:last-child {
-    .content {
-      &:before {
-        content: none;
-      }
-    }
-  }
+.standing-icon::before,
+.standing-icon::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
 }
 
-@include breakpoint(big) {
-  &:before {
-    content: counter(step-counter);
-    position: absolute;
-    font-size: 90px;
-    line-height: 1;
-    font-weight: 300;
-    color: #d8d8d8;
-  }
+/* back */
+.standing-icon::after {
+  inset: calc(var(--back-size) * -1);
+  background-color: var(--accent-color);
 
-  .icon {
-    width: 174px;
-    height: 174px;
-    padding: 48px;
-  }
+  background-image: radial-gradient(
+    circle at calc(50% - var(--front-shadow-offset))
+      calc(50% + var(--front-shadow-offset)),
+    rgb(0 0 0 / 0.25) calc(50% - var(--front-shadow-offset)),
+    transparent calc(50% + var(--front-shadow-offset) * 2)
+  );
+  border-radius: 50%;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
 
-  .body {
-    flex: 0 1 33.3333%;
-    margin-top: 42px * 2;
-  }
-
-  .content {
-    align-items: flex-end;
-  }
-
-  > .step-list__item__inner {
-    position: relative;
-
-    &:before,
-    &:after {
-      border-width: 0px;
-      border-style: solid;
-      border-color: #d8d8d8;
-      display: block;
-      content: "";
-      position: absolute;
-      height: 42px;
-      width: calc(33.3333% - #{42px});
-    }
-  }
-
-  &:nth-child(odd) {
-    > .step-list__item__inner {
-      text-align: right;
-
-      &:before,
-      &:after {
-        border-left-width: 1px;
-        left: calc(33.3333% - #{42px / 2});
-      }
-
-      &:before {
-        border-top-width: 1px;
-        border-top-left-radius: 42px;
-        margin-top: -42px;
-      }
-
-      &:after {
-        border-bottom-width: 1px;
-        border-bottom-left-radius: 42px;
-        margin-bottom: -42px;
-      }
-    }
-
-    &:before {
-      left: 0;
-      margin-left: 33.3333%;
-      transform: translateX(-100%);
-    }
-
-    .icon {
-      margin-left: 72px;
-    }
-  }
-
-  &:nth-child(even) {
-    > .step-list__item__inner {
-      &:before,
-      &:after {
-        border-right-width: 1px;
-        right: calc(33.3333% - #{42px / 2});
-      }
-
-      &:before {
-        border-top-width: 1px;
-        border-top-right-radius: 42px;
-        margin-top: -42px;
-      }
-
-      &:after {
-        border-bottom-width: 1px;
-        border-bottom-right-radius: 42px;
-        margin-bottom: -42px;
-      }
-    }
-
-    &:before {
-      right: 0;
-      margin-right: 33.3333%;
-      transform: translateX(100%);
-    }
-
-    .icon {
-      margin-right: 72px;
-    }
-
-    .body {
-      order: 1;
-    }
-  }
+/* touch-shadow */
+.standing-icon::before {
+  position: absolute;
+  height: calc(var(--touch-shadow-height) * 2);
+  inset-inline: 0;
+  top: calc(100% + var(--back-size) - var(--touch-shadow-height));
+  background-image: radial-gradient(
+    ellipse 50% 50%,
+    rgb(0 0 0 / 0.75),
+    transparent 75%
+  );
+  filter: blur(5px);
 }
 
 /*----------------------------------------------------------
@@ -3410,4 +3237,8 @@ Logistics Section
 ul.logistics img {
   height: 300px;
   width: 100%;
+  margin: 20px 0 20px 0px;
+}
+ul.logistics li strong {
+  font-size: 20px;
 }
