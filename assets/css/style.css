@@ -3242,3 +3242,56 @@ ul.logistics img {
 ul.logistics li strong {
   font-size: 20px;
 }
+/*---------------------------------------------------------------
+NajMeds Section
+----------------------------------------------------------------*/
+.jdzBox {
+  width: 500px;
+  border-bottom: 20px solid #f5b432;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 20px;
+}
+.jdzBox h2 {
+  color: #fff;
+  background: #f5b432;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0;
+}
+.jdzBox ul {
+  position: relative;
+  background: #fff;
+  margin: 0;
+}
+.jdzBox ul li {
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+.jdzBox ul:hover li /*เมื่อเลื่อนเมาส์ รายการ li ที่ไม่ได้เลือกจะแสดงเป็นสีจาง ๆ*/ {
+  opacity: 0.2;
+}
+.jdzBox ul li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: #f5b432;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 1;
+}
+
+.jdzBox ul li:hover span /*เมื่อเลื่อนเมาส์ พืนหลังหมายเลขข้างหน้าจะสลับสีกัน*/ {
+  background: #fff;
+  color: #25bcff;
+}
+@media (max-width: 768px) {
+  .jdzBox {
+    width: 300px;
+  }
+}
