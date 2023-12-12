@@ -255,7 +255,10 @@ p {
 .navbar .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
-
+.navbar .dropdown ul a.active {
+  color: white;
+  background-color: #ffc451;
+}
 .navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
