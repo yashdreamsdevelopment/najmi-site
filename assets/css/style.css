@@ -1493,7 +1493,10 @@ section {
   color: #151515;
   text-decoration: none;
 }
-
+#footer .footer-top .social-links a img{
+  height: 28px;
+  width: 28px;
+}
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: 600;
