@@ -508,7 +508,7 @@ section {
 .section-content {
   align-items: center;
   justify-content: center;
-  max-width: 750px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -522,7 +522,61 @@ section {
   font-family: "Poppins", sans-serif;
   color: #151515;
 }
+.section-content .row img {
+  height: 250px;
+  width: 480px;
+  margin-bottom: 20px;
+}
+.section-content img.engineering {
+  width: 900px;
+  height: 300px;
+}
+.section-content .gtm {
+  background-color: #f2b408;
+  padding: 20px;
+}
+.section-content .gtm img {
+  height: 300px;
+  width: 480px;
+}
+.section-content .endUser {
+  background-color: #f2b408;
+  padding: 40px;
+}
+.section-content .endUser img {
+  height: 300px;
+  width: 200px;
+  position: absolute;
+  left: 100px;
+}
+.section-content .endUser .rot {
+  transform: rotateZ(-7deg);
+}
+.section-content .forecast-data {
+  padding: 10px;
+  background-color: #ea7356d7;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 35%;
+  margin-top: 30px;
+}
 
+.section-content .forecast-img img {
+  height: 380px;
+  width: 900px;
+}
+@media (max-width: 768px) {
+  .section-content .forecast-data {
+    position: relative;
+    left: 0;
+    margin-top: 30px;
+  }
+}
+.productLine img {
+  height: 400px;
+  width: 100%;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
