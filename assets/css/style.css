@@ -1493,7 +1493,7 @@ section {
   color: #151515;
   text-decoration: none;
 }
-#footer .footer-top .social-links a img{
+#footer .footer-top .social-links a img {
   height: 28px;
   width: 28px;
 }
@@ -1637,42 +1637,8 @@ section {
   margin: 10px 0 0 0;
   font-size: 22px;
 }
-/* 
-.otherConsulting .section-title h2 {
-  color: #ddd;
-}
-.otherConsulting .icon-box {
-  border: 1px solid #ebebeb;
-  padding: 20px 10px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
 
-.otherConsulting .icon-box .icon {
-  margin: 0 auto;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.otherConsulting .icon-box .icon img {
-  color: #151515;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.otherConsulting .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
- */ /*--------------------------------------------------------------
+*/ /*--------------------------------------------------------------
 # analysis-hero
 --------------------------------------------------------------*/
 #analysis-hero {
@@ -1880,10 +1846,10 @@ section {
   background: #fff;
   text-align: center;
   border: 10px solid #ebebeb;
-  padding: 40px 30px;
+  padding: 50px 40px;
   border-left: 10px solid #ffc451;
   border-radius: 50%;
-  height: 100%;
+  height: 260px;
 }
 
 .consulting .icon-box .icon img {
@@ -2921,8 +2887,8 @@ Our Services
 }
 
 .figure__productIcon img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 130px;
 }
 
 /*------------------------------------------------------------------
