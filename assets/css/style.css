@@ -112,7 +112,7 @@ p {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 10px 0;
   background: black;
 }
 
@@ -448,10 +448,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  #hero {
-    height: auto;
-  }
-
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -682,7 +678,7 @@ section {
   position: relative;
 }
 .industries .section-title h2 {
-  color: #ddd;
+  color: #ffffff;
 }
 .industries .icon-box {
   text-align: center;
@@ -972,6 +968,14 @@ section {
     background-attachment: scroll;
   }
 }
+@media (max-width: 1300px) {
+  .services-boxes .row .box {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+*/
 
 /*--------------------------------------------------------------
 # Counts
@@ -1253,6 +1257,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  margin-top: 100px;
+}
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1442,7 +1449,7 @@ section {
 --------------------------------------------------------------*/
 #about-hero {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   background: url("../img/about-hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
@@ -1655,7 +1662,7 @@ section {
 --------------------------------------------------------------*/
 #consulting-hero {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   background: url("../img/consulting-hero.png") top center;
   background-size: cover;
   background-position: center center;
@@ -1697,7 +1704,7 @@ section {
 --------------------------------------------------------------*/
 #analysis-hero {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   background: url("../img/consulting-hero.png") top center;
   background-size: cover;
   background-position: center center;
@@ -1739,8 +1746,8 @@ section {
 --------------------------------------------------------------*/
 #services-hero {
   width: 100%;
-  height: 70vh;
-  background: url("../img/services-bg.jpg") top center;
+  height: 80vh;
+  background: url("../img/services-bg.png") top center;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -1945,6 +1952,9 @@ Consulting-info
     rgba(192, 201, 128, 0.2),
     #ffc451
   );
+}
+.consulting-info {
+  margin-top: 100px;
 }
 .consulting-info .section-title {
   display: flex;
@@ -2835,8 +2845,8 @@ Our Services
 
 /* Product */
 .figure__product {
-  width: 350px;
-  height: 150px;
+  width: 450px;
+  height: 180px;
   padding: 0 20px;
   border-radius: 1000px;
 
@@ -2915,15 +2925,15 @@ Our Services
 
 .figure__productDesc {
   color: var(--color8);
-  max-width: 140px;
-  font-size: 10px;
+  max-width: 170px;
+  font-size: 12px;
   font-weight: 400;
 }
 
 .figure__productIconBox {
   background-color: var(--color9);
-  width: 95px;
-  height: 95px;
+  width: 120px;
+  height: 120px;
   padding: 15px;
   border-radius: 50%;
   box-shadow: rgba(50, 50, 93, 0.25) 10px 13px 27px -5px,
@@ -2945,6 +2955,42 @@ Our Services
   height: 130px;
 }
 
+@media (max-width: 1100px) {
+  .figure__product {
+    width: 350px;
+    height: 180px;
+  }
+  .figure__productIconBox {
+    width: 95px;
+    height: 95px;
+  }
+  .figure__productIcon img {
+    width: 110px;
+    height: 110px;
+  }
+  .figure__productDesc {
+    max-width: 160px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .figure__product {
+    width: 300px;
+    height: 180px;
+  }
+  .figure__productIconBox {
+    width: 80px;
+    height: 80px;
+  }
+  .figure__productIcon img {
+    width: 110px;
+    height: 110px;
+  }
+  .figure__productDesc {
+    max-width: 140px;
+    font-size: 10px;
+  }
+}
 /*------------------------------------------------------------------
 Services Info
 --------------------------------------------------------------------*/
@@ -2955,6 +3001,9 @@ Services Info
     rgba(192, 201, 128, 0.2),
     #ffc451
   );
+}
+.services-info {
+  margin-top: 100px;
 }
 .services-info .section-title {
   display: flex;
@@ -3320,4 +3369,49 @@ NajMeds Section
   .jdzBox {
     width: 300px;
   }
+}
+
+/*---------------------------------------------------------------
+Related Offering
+----------------------------------------------------------------*/
+.related_offering {
+  padding: 50px 0px;
+  position: relative;
+  color: #fff;
+}
+.related_offering h2 {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.related_offering_overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #242c35;
+  opacity: 0.9;
+  z-index: 1;
+}
+.related_offering .container {
+  position: relative;
+  z-index: 2;
+}
+.related_offering .col-lg-3,
+.related_offering .col-lg-2 {
+  text-align: center;
+}
+.related_offering a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.related_offering img {
+  height: 100px;
+  width: 100px;
+  border-radius: 4px;
 }
