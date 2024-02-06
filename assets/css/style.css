@@ -128,7 +128,6 @@ p {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 2px;
-  /*   text-transform: uppercase; */
 }
 
 #header .logo a {
@@ -1943,6 +1942,16 @@ section {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
+@media (max-width: 768px) {
+  .consulting .icon-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .consulting .icon-box p {
+    text-align: center;
+  }
+}
 /*----------------------------------------------------------
 Consulting-info
 ------------------------------------------------------------*/
@@ -2377,7 +2386,6 @@ Expansion Strategy
 
   box-shadow: inset 0.125rem -0.125rem 0.25rem rgb(0 0 0 / 0.125),
     inset -0.25rem 0.25rem 0.25rem rgb(255 255 255 / 0.25);
-  /*     -0.25rem 0.25rem 0.25rem rgb(0 0 0 / .25); */
   position: relative;
 
   display: grid;
@@ -2476,9 +2484,7 @@ Customer Satisfaction
   top: 0px;
   border-radius: 50px 0px 0px 50px;
   z-index: -1;
-  /* background: #95B7A2; */ /* background: -webkit-linear-gradient(bottom, #95B7A2, #AED2BC); */
   background: -moz-linear-gradient(bottom, #95b7a2, #aed2bc);
-  /* background: linear-gradient(to top, #95B7A2, #AED2BC); */
 }
 
 .flexcardNumber:after {
@@ -2681,7 +2687,6 @@ Instore Survey
 .olcards li .content .title {
   grid-area: title;
   font-size: 1.25em;
-  /* font-weight: 700; */
 }
 .olcards li .content .text {
   grid-area: text;
@@ -2805,6 +2810,13 @@ Our Services
 }
 
 /* Figure */
+.services-infographic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
 .figure:nth-of-type(2) {
   margin-left: 35px;
   margin-top: 70px;
@@ -2974,6 +2986,10 @@ Our Services
   }
 }
 @media (max-width: 768px) {
+  /*   .services-infographic {
+    display: flex;
+    flex-direction: column;
+  } */
   .figure__product {
     width: 300px;
     height: 180px;
@@ -2990,6 +3006,13 @@ Our Services
     max-width: 140px;
     font-size: 10px;
   }
+  /*  .figure__product--right {
+    left: 0;
+    flex-direction: row;
+  }
+  .figure__product--right::before {
+    left: 0px;
+  } */
 }
 /*------------------------------------------------------------------
 Services Info
@@ -3349,7 +3372,7 @@ NajMeds Section
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
 }
-.jdzBox ul:hover li /*เมื่อเลื่อนเมาส์ รายการ li ที่ไม่ได้เลือกจะแสดงเป็นสีจาง ๆ*/ {
+.jdzBox ul:hover li {
   opacity: 0.2;
 }
 .jdzBox ul li:hover {
@@ -3361,7 +3384,7 @@ NajMeds Section
   opacity: 1;
 }
 
-.jdzBox ul li:hover span /*เมื่อเลื่อนเมาส์ พืนหลังหมายเลขข้างหน้าจะสลับสีกัน*/ {
+.jdzBox ul li:hover span {
   background: #fff;
   color: #25bcff;
 }
