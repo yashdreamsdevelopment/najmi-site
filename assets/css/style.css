@@ -2986,10 +2986,6 @@ Our Services
   }
 }
 @media (max-width: 768px) {
-  /*   .services-infographic {
-    display: flex;
-    flex-direction: column;
-  } */
   .figure__product {
     width: 300px;
     height: 180px;
@@ -3006,13 +3002,43 @@ Our Services
     max-width: 140px;
     font-size: 10px;
   }
-  /*  .figure__product--right {
-    left: 0;
+}
+@media (max-width: 540px) {
+  .services-infographic {
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 300px;
+  }
+
+  .figure:nth-of-type(2) {
+    margin-top: 200px;
+  }
+
+  .figure__pathStart {
+    width: 0px;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+  }
+  .figure__product::before {
+    border: 0;
+  }
+  .figure__pathPoint {
+    width: 0px;
+  }
+
+  /* Product */
+  .figure__product {
+    /* Position */
+    right: 0px;
+  }
+
+  /* Product - Right */
+  .figure__product--right {
+    left: -310px;
     flex-direction: row;
   }
-  .figure__product--right::before {
-    left: 0px;
-  } */
 }
 /*------------------------------------------------------------------
 Services Info
