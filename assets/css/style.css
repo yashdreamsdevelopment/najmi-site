@@ -2722,7 +2722,7 @@ Social Research
 ----------------------------------------------------------*/
 
 .socialResearch {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   gap: 5px;
