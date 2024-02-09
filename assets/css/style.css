@@ -541,8 +541,6 @@ section {
 .section-content .endUser img {
   height: 300px;
   width: 200px;
-  position: absolute;
-  left: 100px;
 }
 .section-content .endUser .rot {
   transform: rotateZ(-7deg);
@@ -567,11 +565,23 @@ section {
     left: 0;
     margin-top: 30px;
   }
+  .section-content .endUser .rot {
+    transform: rotateZ(0deg);
+  }
+  .section-content .endUser img {
+    left: 0px;
+  }
+  .section-content .endUser img {
+    height: 300px;
+    width: 300px;
+  }
 }
+
 .productLine img {
   height: 400px;
   width: 100%;
 }
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1991,6 +2001,12 @@ Consulting-info
   text-transform: none;
   font-family: "Poppins", sans-serif;
 }
+@media (max-width: 768px) {
+  .consulting-info .section-content .businessPlanning p {
+    font-size: 10px;
+  }
+}
+
 /*----------------------------------------------------------
 Market Entry Strategy
 ------------------------------------------------------------*/
@@ -2288,7 +2304,6 @@ ol > li {
   margin-inline: auto;
   list-style: none;
   display: grid;
-  font-family: system-ui, sans-serif;
   color: white;
   counter-reset: liCount;
 }
@@ -2336,7 +2351,6 @@ ol > li {
   --size: calc(var(--number-size) + var(--padding-block) * 4);
   width: var(--size);
   aspect-ratio: 1;
-  inset-block-start: calc(var(--padding-block) * -1);
   --inset-inline: calc(var(--padding-inline) - var(--padding-block) * 2);
   inset-inline: var(--inset-inline) auto;
   border-radius: 100vmax;
@@ -2375,9 +2389,7 @@ ol.right > li::after {
 /*--------------------------------------------------------------
 Expansion Strategy
 --------------------------------------------------------------*/
-.section-content .row img {
-  height: auto;
-}
+
 .standing-icon {
   width: 8rem;
   aspect-ratio: 1;
@@ -2440,6 +2452,9 @@ Expansion Strategy
     transparent 75%
   );
   filter: blur(5px);
+}
+.section-content .standing-icon img {
+  height: auto;
 }
 
 /*----------------------------------------------------------
@@ -3180,7 +3195,6 @@ ol.knowledge li::before {
   font-size: 36px;
   line-height: 1.3em;
   background-color: #f5b432;
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
   padding: 10px;
   position: absolute;
@@ -3191,7 +3205,6 @@ ol.knowledge li::before {
 
 ol.knowledge li strong {
   display: block;
-  font-family: "Roboto Slab", serif;
   font-weight: 900;
   font-size: 24px;
   margin: 0.2em 0 0.3em 0;
@@ -3475,4 +3488,8 @@ Related Offering
   height: 100px;
   width: 100px;
   border-radius: 4px;
+}
+.services img {
+  height: 150px;
+  width: 150px;
 }
