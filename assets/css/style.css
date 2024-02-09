@@ -1882,7 +1882,16 @@ section {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
-
+@media (max-width: 768px) {
+  .analysis .icon-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .ana .icon-box p {
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 # Consulting
 --------------------------------------------------------------*/
@@ -2366,7 +2375,9 @@ ol.right > li::after {
 /*--------------------------------------------------------------
 Expansion Strategy
 --------------------------------------------------------------*/
-
+.section-content .row img {
+  height: auto;
+}
 .standing-icon {
   width: 8rem;
   aspect-ratio: 1;
