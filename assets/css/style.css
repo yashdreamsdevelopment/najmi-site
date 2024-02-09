@@ -2723,9 +2723,8 @@ Social Research
 
 .socialResearch {
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  gap: 5px;
+  gap: 10px;
 }
 
 .socialResearch .infographic-items {
